@@ -1,0 +1,48 @@
+zze{
+    "manifest_version": 3,
+    "name": "Omni Player",
+    "version": "0.0.1",
+    "description": "Permettre au lecteur multimédia d'Animeo de supporter le contenu provenant des lecteurs MyTV, MOON et VOE.",
+    "icons": {
+        "128": "icons/icon.png"
+    },
+    "permissions": [
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "*://*.animeovf.fr/*",
+        "*://*.uqload.to/*",
+        "*://*.ahcdn.com/*",
+        "*://*.xhcdn.com/*",
+        "*://*.cdn13.com/*",
+        "*://*.sibnet.ru/*",
+        "*://*.myvi.ru/*",
+        "*://*.mail.ru/*",
+        "*://*.vmrange.lat/*",
+        "*://*.vmrest.space/*",
+        "*://*.vmwes.cloud/*",
+        "*://*.vmeas.cloud/*",
+        "*://*.moly.cloud/*",
+        "*://*.filemoon.sx/*",
+        "*://*.defienietlynotme.com/*",
+        "*://*.designparty.sx/*",
+        "*://*.vidmoly.to/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://*.animeovf.fr/*"],
+            "js": ["src/inject.js"],
+            "run_at": "document_start",
+            "world": "MAIN"
+        }
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    }
+}

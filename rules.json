@@ -1,0 +1,276 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "origin",
+                    "operation": "remove"
+                },
+                {
+                    "header": "referer",
+                    "operation": "remove"
+                },
+                {
+                    "header": "sec-fetch-dest",
+                    "operation": "set",
+                    "value": "empty"
+                },
+                {
+                    "header": "sec-fetch-mode",
+                    "operation": "set",
+                    "value": "cors"
+                },
+                {
+                    "header": "sec-fetch-site",
+                    "operation": "set",
+                    "value": "same-origin"
+                },
+                {
+                    "header": "sec-fetch-user",
+                    "operation": "remove"
+                }
+            ],
+            "responseHeaders": [
+                {
+                    "header": "access-control-allow-origin",
+                    "operation": "set",
+                    "value": "*"
+                },
+                {
+                    "header": "x-frame-options",
+                    "operation": "remove"
+                }
+            ]
+        },
+        "condition": {
+            "excludedRequestDomains": [
+                "animeovf.fr",
+                "www.youtube-nocookie.com",
+                "www.tiktok.com",
+                "tiktokcdn-eu.com"
+            ],
+            "initiatorDomains": [
+                "animeovf.fr"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "referer",
+                    "operation": "set",
+                    "value": "https://uqload.to/"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "^https://m[^.]+\\.uqload\\.to/",
+            "initiatorDomains": [
+                "animeovf.fr"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "referer",
+                    "operation": "set",
+                    "value": "https://fr.xhamster.com"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "^https://[^/]+\\.(ahcdn|xhcdn|cdn13)\\.com/",
+            "initiatorDomains": [
+                "animeovf.fr"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "referer",
+                    "operation": "set",
+                    "value": "https://video.sibnet.ru"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "^https://[^/]+\\.sibnet\\.ru/",
+            "initiatorDomains": [
+                "animeovf.fr"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "referer",
+                    "operation": "set",
+                    "value": "https://myvi.ru/"
+                },
+                {
+                    "header": "sec-fetch-dest",
+                    "operation": "set",
+                    "value": "video"
+                },
+                {
+                    "header": "sec-fetch-mode",
+                    "operation": "set",
+                    "value": "no-cors"
+                },
+                {
+                    "header": "sec-fetch-site",
+                    "operation": "set",
+                    "value": "same-site"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "^https://[^/]+\\.myvi\\.ru/",
+            "initiatorDomains": [
+                "animeovf.fr"
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "access-control-allow-origin",
+                    "operation": "set",
+                    "value": "https://animeovf.fr"
+                },
+                {
+                    "header": "access-control-allow-credentials",
+                    "operation": "set",
+                    "value": "true"
+                }
+            ]
+        },
+        "condition": {
+            "requestDomains": [
+                "myvi.ru"
+            ],
+            "initiatorDomains": [
+                "animeovf.fr"
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "access-control-allow-origin",
+                    "operation": "set",
+                    "value": "https://animeovf.fr"
+                },
+                {
+                    "header": "access-control-allow-credentials",
+                    "operation": "set",
+                    "value": "true"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "^https://my\\.mail\\.ru/\\+/video/meta/[0-9]+",
+            "initiatorDomains": [
+                "animeovf.fr"
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "origin",
+                    "operation": "set",
+                    "value": "https://vidmoly.to"
+                },
+                {
+                    "header": "referer",
+                    "operation": "set",
+                    "value": "https://vidmoly.to/"
+                },
+                {
+                    "header": "sec-fetch-site",
+                    "operation": "set",
+                    "value": "cross-site"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "^https://[^.]+\\.(?:(?:vmrange\\.lat)|(?:vmrest\\.space)|(?:vmwes\\.cloud)|(?:vmeas\\.cloud)|(?:moly\\.cloud))/",
+            "initiatorDomains": [
+                "animeovf.fr"
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "referer",
+                    "operation": "set",
+                    "value": "https://v5.voiranime.com/"
+                },
+                {
+                    "header": "sec-fetch-dest",
+                    "operation": "set",
+                    "value": "iframe"
+                },
+                {
+                    "header": "sec-fetch-mode",
+                    "operation": "set",
+                    "value": "navigate"
+                },
+                {
+                    "header": "sec-fetch-site",
+                    "operation": "set",
+                    "value": "cross-site"
+                },
+                {
+                    "header": "sec-fetch-user",
+                    "operation": "remove"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "^https://(((filemoon\\.sx)|(defienietlynotme\\.com)|(designparty\\.sx))/e/.+)|(vidmoly\\.to/embed-[\\w.]+$)",
+            "initiatorDomains": [
+                "animeovf.fr"
+            ]
+        }
+    }
+]
