@@ -78,26 +78,6 @@
         }
     },
     {
-        "id": 3,
-        "priority": 1,
-        "action": {
-            "type": "modifyHeaders",
-            "requestHeaders": [
-                {
-                    "header": "referer",
-                    "operation": "set",
-                    "value": "https://fr.xhamster.com"
-                }
-            ]
-        },
-        "condition": {
-            "regexFilter": "^https://[^/]+\\.(ahcdn|xhcdn|cdn13)\\.com/",
-            "initiatorDomains": [
-                "animeovf.fr"
-            ]
-        }
-    },
-    {
         "id": 4,
         "priority": 1,
         "action": {
