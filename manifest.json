@@ -12,9 +12,6 @@
     "host_permissions": [
         "*://*.animeovf.fr/*",
         "*://*.uqload.to/*",
-        "*://*.ahcdn.com/*",
-        "*://*.xhcdn.com/*",
-        "*://*.cdn13.com/*",
         "*://*.sibnet.ru/*",
         "*://*.myvi.ru/*",
         "*://*.mail.ru/*",
