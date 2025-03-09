@@ -1,4 +1,4 @@
-# Omny Player
+# Omni Player
 
 Cette extension Chrome modifie les en-têtes HTTP pour améliorer la compatibilité avec animeovf.fr.
 
