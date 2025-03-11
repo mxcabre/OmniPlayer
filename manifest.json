@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Omni Player",
+    "name": "Animeo Player (CORS Relaxer)",
     "version": "0.0.1",
-    "description": "Permettre au lecteur multimédia d'Animeo de supporter le contenu provenant des lecteurs MyTV, MOON et VOE.",
+    "description": "Relaxe les restrictions CORS sur Animeo pour permettre au Lecteur Animeo de lire des vidéos depuis des lecteurs tiers, avec support Chromecast et sans publicité.",
     "icons": {
         "128": "icons/icon.png"
     },
